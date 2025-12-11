@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Диабет: информация и поддержка</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="img/favicon.ico">
+</head>
+<body>
+    <!-- Шапка сайта -->
+    <header>
+        <div class="logo">
+            <img src="img/logo.png" alt="Логотип Диабет">
+        </div>
+        <h1 class="site-title">Диабет: знание = жизнь</h1>
+        <nav>
+            <ul>
+                <li><a href="#about">О диабете</a></li>
+                <li><a href="#types">Типы диабета</a></li>
+                <li><a href="#prevention">Профилактика</a></li>
+                <li><a href="#quiz">Тест</a></li>
+                <li><a href="#game">Игра</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Слайдер -->
+    <div class="slider-container">
+        <div class="slider">
+            <img src="img/slide1.jpg" alt="Контроль сахара" onclick="openFullscreenImage(this)">
+            <img src="img/slide2.jpg" alt="Здоровое питание" onclick="openFullscreenImage(this)">
+            <img src="img/slide3.jpg" alt="Физическая активность" onclick="openFullscreenImage(this)">
+            <img src="img/slide4.jpg" alt="Глюкометр" onclick="openFullscreenImage(this)">
+            <img src="img/slide5.jpg" alt="Консультация врача" onclick="openFullscreenImage(this)">
+        </div>
+        <button class="prev-button" aria-label="Предыдущий слайд">&lt;</button>
+        <button class="next-button" aria-label="Следующий слайд">&gt;</button>
+        <div class="auto-slide">
+            <label>
+                <input type="checkbox" id="autoSlideCheckbox" checked>
+                Автопрокрутка
+            </label>
+        </div>
+    </div>
+
+    <!-- Основное содержание -->
+    <main>
+        <section id="about">
+            <div class="content-section">
+                <h2>Что такое диабет?</h2>
+                <p>Диабет — это хроническое заболевание, которое возникает, когда поджелудочная железа не вырабатывает достаточно инсулина или когда организм не может эффективно использовать вырабатываемый им инсулин.</p>
+                <p>Инсулин — это гормон, регулирующий уровень сахара в крови. Гипергликемия, или повышенный уровень сахара в крови, является общим результатом неконтролируемого диабета и со временем приводит к серьезному повреждению многих систем организма.</p>
+                <img src="img/diabetes_info.jpg" class="content-img" alt="Информация о диабете">
+            </div>
+        </section>
+
+        <section id="types">
+            <div class="content-section">
+                <h2>Типы диабета</h2>
+                <div class="columns">
+                    <div class="column">
+                        <h3>Диабет 1 типа</h3>
+                        <img src="img/type1.jpg" class="type-img" alt="Диабет 1 типа">
+                        <p>Аутоиммунное заболевание, при котором организм атакует собственные клетки поджелудочной железы. Требует ежедневных инъекций инсулина.</p>
+                    </div>
+                    <div class="column">
+                        <h3>Диабет 2 типа</h3>
+                        <img src="img/type2.jpg" class="type-img" alt="Диабет 2 типа">
+                        <p>Наиболее распространенный тип, связанный с инсулинорезистентностью. Часто связан с избыточным весом и малоподвижным образом жизни.</p>
+                    </div>
+                    <div class="column">
+                        <h3>Гестационный диабет</h3>
+                        <img src="img/gestational.jpg" class="type-img" alt="Гестационный диабет">
+                        <p>Возникает во время беременности и обычно проходит после родов, но повышает риск развития диабета 2 типа в будущем.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="prevention">
+            <div class="content-section">
+                <h2>Профилактика и контроль</h2>
+                <div class="prevention-list">
+                    <div class="prevention-item">
+                        <img src="img/food.jpg" alt="Здоровое питание">
+                        <h4>Сбалансированное питание</h4>
+                        <p>Ограничение сахара и насыщенных жиров, увеличение потребления клетчатки.</p>
+                    </div>
+                    <div class="prevention-item">
+                        <img src="img/sport.jpg" alt="Физическая активность">
+                        <h4>Регулярная активность</h4>
+                        <p>Не менее 30 минут умеренной физической активности 5 раз в неделю.</p>
+                    </div>
+                    <div class="prevention-item">
+                        <img src="img/control.jpg" alt="Контроль сахара">
+                        <h4>Регулярный контроль</h4>
+                        <p>Систематический мониторинг уровня глюкозы в крови.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Тест -->
+        <section id="quiz">
+            <div class="content-section">
+                <h2>Тест: что вы знаете о диабете?</h2>
+                <div id="quiz-container">
+                    <div id="question"></div>
+                    <div id="answers"></div>
+                    <button id="next-btn" class="quiz-btn">Следующий вопрос</button>
+                    <div id="result"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Игра -->
+        <section id="game">
+            <div class="content-section">
+                <h2>Игра: Собери здоровую тарелку</h2>
+                <p>Перетащите продукты в правильную категорию!</p>
+                <div class="game-container">
+                    <div class="game-instructions">
+                        <p>Перенесите продукты в соответствующую категорию:</p>
+                        <ul>
+                            <li><span style="color: green;">ЗЕЛЕНЫЙ</span> - Полезные при диабете</li>
+                            <li><span style="color: red;">КРАСНЫЙ</span> - Ограничить потребление</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="food-items">
+                        <div class="food" data-type="good" draggable="true">🥦 Брокколи</div>
+                        <div class="food" data-type="bad" draggable="true">🍩 Пончик</div>
+                        <div class="food" data-type="good" draggable="true">🐟 Лосось</div>
+                        <div class="food" data-type="bad" draggable="true">🥤 Газировка</div>
+                        <div class="food" data-type="good" draggable="true">🥑 Авокадо</div>
+                        <div class="food" data-type="bad" draggable="true">🍰 Торт</div>
+                    </div>
+                    
+                    <div class="drop-zones">
+                        <div class="drop-zone good-zone" id="good-zone">
+                            <h3>Полезные продукты</h3>
+                            <div class="zone-content"></div>
+                        </div>
+                        <div class="drop-zone bad-zone" id="bad-zone">
+                            <h3>Ограничить потребление</h3>
+                            <div class="zone-content"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="game-score">
+                        <p>Правильно: <span id="correct-count">0</span></p>
+                        <p>Неправильно: <span id="wrong-count">0</span></p>
+                        <button id="reset-game" class="game-btn">Начать заново</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Полноэкранный просмотр изображений -->
+    <div id="fullscreen-container" class="hidden">
+        <span class="close-button" onclick="closeFullscreenImage()">&times;</span>
+        <img src="" alt="Полноэкранное изображение" id="fullscreen-image">
+    </div>
+
+    <!-- Кнопка "Наверх" -->
+    <button id="scrollToTopButton">↑ Наверх</button>
+
+    <!-- Подвал -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-info">
+                <h3>Контакты для поддержки</h3>
+                <p>Горячая линия: 8-800-200-0-200</p>
+                <p>Email: support@diabet-info.ru</p>
+            </div>
+            <div class="social-icons">
+                <a href="https://vk.com" class="social-icon" target="_blank">
+                    <img src="img/vk.png" alt="ВКонтакте">
+                </a>
+                <a href="https://telegram.org" class="social-icon" target="_blank">
+                    <img src="img/tg.png" alt="Telegram">
+                </a>
+                <a href="https://youtube.com" class="social-icon" target="_blank">
+                    <img src="img/youtube.png" alt="YouTube">
+                </a>
+                <a href="https://facebook.com" class="social-icon" target="_blank">
+                    <img src="img/facebook.png" alt="Facebook">
+                </a>
+            </div>
+            <p class="copyright">© 2024 Диабет: информация и поддержка. Все права защищены.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
